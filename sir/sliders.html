@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+.silde-containers{
+	position:relative;
+	width:50%;
+	height:40vh;
+	margin:0 auto;
+}
+.slide{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+p{
+	position:absolute;
+	top:30%;
+	left:50%;
+	display:block;
+}
+.btn{
+	position:absolute;
+	top:40%;
+	left:50%;
+	display:block;
+}
+button{
+	padding:9px 9px;
+}
+
+
+</style>
+
+<body>
+    <div class="silde-containers">
+		<div class="slide" id="slide"><p>Image</p></div>
+		<div class="slide" id="slide"><p>Image2</p></div>
+		<div class="slide" id="slide"><p>Image4</p></div>
+		<div class="slide" id="slide"><p>Image5</p></div>
+		<div class="slide" id="slide"><p>Image6</p></div>
+
+		<div class="btn">
+			<button id="minus"> < </button>
+			<button id="plus"> > </button>
+          
+		</div>
+		<div class="numbers" id="num">
+
+		</div>
+	</div>
+
+<script>
+	var slideIndex = 1;
+		sliders(slideIndex)
+		var plus=document.getElementById('plus').addEventListener('click',function(e){
+		sliders(slideIndex += 1 );
+		});
+
+		var plus=document.getElementById('minus').addEventListener('click',function(e){
+		sliders(slideIndex -= 1 );
+		});
+
+	function sliders(n){
+	var i;
+	var slides= document.getElementsByClassName('slide');
+
+if(slideIndex > slides.length){
+	slideIndex=5;
+}
+if(n < 1){
+	slideIndex=1;
+}
+	for ( i = 0; i< slides.length; i++) {
+		slides[i].style.display="none";
+	}
+	slides[slideIndex - 1].style.display="block";
+	document.getElementById('num').innerHTML=slideIndex;
+}
+
+</script>
+
+</body>
+</html>

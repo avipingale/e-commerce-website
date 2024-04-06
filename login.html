@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="http://fonts.cdnfonts.com/css/broadway" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<title>Login</title>
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+
+	<!-------------- header start ---------------- -->
+
+
+	<!-- <div class="header">
+		<div class="burger"><i class="fas fa-bars"></i></div>
+		<div class="logo">Fashion</div>
+		<nav>
+			<ul class="ul1" id="menu">
+				<li class="active-li"><a href="index.html" class="active-a">Home</a></li>
+				<li><a href="Product.html">Product <i class="fas fa-caret-circle-down"></i></a>
+					<ul class="ul2">
+
+						<li><a href="Get more.html">Men's</a></li>
+						<li><a href="get more2.html">Girl's</a></li>
+						<li><a href="#">Shoe's</a></li>
+
+					</ul>
+				</li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</nav>
+		<div class="login"><a href="#" class="login-a">Login</a></div>
+		<div class="cart"><div class="zero">
+			<span class="span-9"> 0 </span></div><a href="#" class="cart-logo"><i class='bx bx-cart'></i></a></div>
+		</div>
+		
+ -->
+		<!-------------- header end ---------------- -->
+
+
+		<div class="conatiner">
+			
+			<div class="card">
+				<div class="box" id="card">
+
+
+<!-------------- Login start ---------------- -->
+
+					<div class="front-card">
+						<div class="logo-2"><img src="image/user-3.png" alt=""></div>
+						<h2>Login</h2>
+						<form onsubmit="return validation();" action="index.html">
+							<input type="text" class="input-box" id="log-name" placeholder="Enter Your Name"  autocomplete="off" required>
+							<p>wcsw</p>
+
+							<input type="text" class="input-box" id="log-email" placeholder="Enter Your Email Id" autocomplete="off" required>
+							<p>wcsw</p>
+							
+							<input type="password" class="input-box" id="log-password" placeholder="Enter Your Password" autocomplete="off" required>
+							<p>wcsw</p>
+
+							<button type="submit" class="submit-btn">Submit</button>
+							<input type="checkbox"><span>Remember Me</span>
+						</form>
+						<button type="button" class="btn" onclick="openregister()">Register</button>
+						<a href="#">Fosrgot Password</a>
+
+					</div>
+
+<!-------------- register start ---------------- -->
+
+					<div class="back-card">
+						<div class="logo-3"><img src="image/user-3.png" alt=""></div>
+						<h2>Register</h2>
+						<form onsubmit="return valid();">
+							<input type="text" class="input-box" id="name" placeholder="Enter Your Name"  autocomplete="off" required>
+							<p>wcsw</p>
+							<br>
+							<input type="text" class="input-box" id="email" placeholder="Enter Your Email Id" autocomplete="off" required>
+							<p>wcsw</p>
+							<br>
+
+							<input type="password" class="input-box" id="password" placeholder="Enter Your Password" autocomplete="off" required>
+							<p>wcsw</p>
+							<br>
+
+							<input type="password" class="input-box" id="cpassword" placeholder="Re-enter Enter Password" autocomplete="off" required>
+							<p>wcsw</p>
+							<br>
+
+							<button type="submit" class="submit-btn">Submit</button>
+							<input type="checkbox"><span>Remember Me</span>
+						</form>
+						<button type="button" class="btn" onclick="openlogin()">Login</button>
+						<a href="#" class="forgot">Forgot Password</a>
+
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-------------- Login end ---------------- -->
+
+
+
+
+
+		<!----------*Script*-------- -->
+
+		<script type="text/javascript" src="form.js">
+
+// function valid(){
+// 	var f=document.querySelector('#name')
+// 	var username=document.querySelector('#name').value;
+// 	var Email=document.querySelector("#email").value;
+// 	var Pass=document.querySelector("#password").value;
+// 	var cPass=document.querySelector("#cpassword").value;
+
+// 	var usercheck=/^[A-Z][a-z]{4,30}$/;
+// 	var emailcheck=/^[a-zA-Z]{3,}[0-9]{2,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+// 	var passcheck=/^[a-zA-z]{3,}[@#$%&*]{1}[0-9]{3,16}$/;
+	
+
+// 	if(usercheck.test(username)){
+// 		f.style.outlineColor="green";
+// 	}
+// 	else{
+		
+// 		f.style.outlineColor="red";
+
+// 		return false;
+// 	}
+
+
+// 	if(emailcheck.test(Email)){
+// 		email.style.outlineColor="green";
+
+// 	}
+// 	else{
+// 		email.style.outlineColor="red";
+
+// 		return false;	
+// 	}
+// 	if(passcheck.test(Pass)){
+// 		password.style.outlineColor="green";
+
+// 	}
+// 	else{
+// 		password.style.outlineColor="red";
+
+// 		return false;
+// 	}
+// 	if(cPass.match(Pass)){
+// 		cpassword.style.outlineColor="green";
+
+// 	}else{
+// 		cpassword.style.outlineColor="red";
+
+// 		return false;
+// 	}
+
+// }
+
+
+
+
+// //////  login
+
+
+
+// function validation(){
+
+
+// 	var u=document.querySelector('#log-name')
+// 	var e=document.querySelector('#log-email')
+// 	var p=document.querySelector('#log-password')
+	
+// 	var logusername=document.querySelector('#log-name').value;
+// 	var logEmail=document.querySelector("#log-email").value;
+// 	var logPass=document.querySelector("#log-password").value;
+
+
+// 	var userchek=/^[A-Z][a-z]{4,30}$/;
+// 	var emailchek=/^[a-zA-Z]{3,}[0-9]{2,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+// 	var passchek=/^[a-zA-z]{3,}[@#$%&*]{1}[0-9]{3,16}$/;
+	
+
+// 	if(userchek.test(logusername)){
+// 		u.style.outlineColor="green";
+// 	}
+// 	else{
+// 		u.style.outlineColor="red";
+
+// 		return false;
+// 	}
+
+
+// 	if(emailchek.test(logEmail)){
+// 		e.style.outlineColor="green";
+// 	}
+// 	else{
+// 		e.style.outlineColor="red";
+
+// 		return false;	
+// 	}
+
+// 	if(passchek.test(logPass)){
+// 		p.style.outlineColor="green";
+
+// 	}else{
+
+// 		p.style.outlineColor="red";
+
+// 		return false;
+// 	}
+
+
+// }
+
+
+//////////   rotate
+
+
+
+	// 		const card = document.getElementById("card")
+
+	// 		function openlogin(){
+	// 			card.style.transform = "rotateY(0deg)";
+	// 		}
+	// function openregister(){
+	// 			card.style.transform = "rotateY(-180deg)";
+	// 		}
+
+
+		</script>
+		
+	</body>
+	</html>
